@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "757039483376",
+    "project_id": "eq-louisville-android"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757039483376:android:575b4d783a88970d",
+        "android_client_info": {
+          "package_name": "com.eventqplatform.eqsdk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT1KxqQc5pMr7BGdK6vFYfgV0Vdn6_Wdo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-73542978-3"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

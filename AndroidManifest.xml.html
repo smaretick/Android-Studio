@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>AndroidManifest.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); font-style: italic; }
+.s1 { color: rgb(0,0,255); font-weight: bold; }
+.s2 { color: rgb(0,0,0); }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,128); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+AndroidManifest.xml</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">&lt;?</span><span class="s1">xml version=</span><span class="s3">&quot;1.0&quot; </span><span class="s1">encoding=</span><span class="s3">&quot;utf-8&quot;</span><span class="s0">?&gt;</span><span class="s2"> 
+&lt;</span><span class="s4">manifest </span><span class="s1">xmlns:android=</span><span class="s3">&quot;http://schemas.android.com/apk/res/android&quot;</span><span class="s2"> 
+    </span><span class="s1">package=</span><span class="s3">&quot;com.eventqplatform.eqsdk&quot;</span><span class="s2">&gt; 
+ 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.INTERNET&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.ACCESS_FINE_LOCATION&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.ACCESS_COARSE_LOCATION&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.SYSTEM_ALERT_WINDOW&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.READ_PHONE_STATE&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.RECEIVE_BOOT_COMPLETED&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.ACCESS_WIFI_STATE&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.ACCESS_NETWORK_STATE&quot; </span><span class="s2">/&gt; 
+    &lt;</span><span class="s4">uses-permission </span><span class="s1">android:name=</span><span class="s3">&quot;android.permission.WAKE_LOCK&quot; </span><span class="s2">/&gt; 
+ 
+    &lt;</span><span class="s4">uses-feature</span><span class="s2"> 
+        </span><span class="s1">android:glEsVersion=</span><span class="s3">&quot;0x00020000&quot;</span><span class="s2"> 
+        </span><span class="s1">android:required=</span><span class="s3">&quot;true&quot; </span><span class="s2">/&gt; 
+ 
+    &lt;</span><span class="s4">application</span><span class="s2"> 
+        </span><span class="s1">android:allowBackup=</span><span class="s3">&quot;true&quot;</span><span class="s2"> 
+        </span><span class="s1">android:supportsRtl=</span><span class="s3">&quot;true&quot;</span><span class="s2">&gt; 
+ 
+        &lt;</span><span class="s4">service</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;.EQNotificationService&quot;</span><span class="s2"> 
+            </span><span class="s1">android:enabled=</span><span class="s3">&quot;true&quot;</span><span class="s2"> 
+            </span><span class="s1">android:exported=</span><span class="s3">&quot;false&quot; </span><span class="s2">/&gt; 
+        &lt;</span><span class="s4">service</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;.EQLocationService&quot;</span><span class="s2"> 
+            </span><span class="s1">android:enabled=</span><span class="s3">&quot;true&quot;</span><span class="s2"> 
+            </span><span class="s1">android:exported=</span><span class="s3">&quot;false&quot; </span><span class="s2">/&gt; 
+        &lt;</span><span class="s4">receiver </span><span class="s1">android:name=</span><span class="s3">&quot;.EQServicesAlarmReceiver&quot;</span><span class="s2"> 
+            </span><span class="s1">android:process=</span><span class="s3">&quot;:alarmReceiver&quot;</span><span class="s2">&gt; 
+            &lt;</span><span class="s4">intent-filter</span><span class="s2">&gt; 
+                &lt;</span><span class="s4">action </span><span class="s1">android:name=</span><span class="s3">&quot;serviceRestartAlarm&quot; </span><span class="s2">&gt; 
+                &lt;/</span><span class="s4">action</span><span class="s2">&gt; 
+            &lt;/</span><span class="s4">intent-filter</span><span class="s2">&gt; 
+        &lt;/</span><span class="s4">receiver</span><span class="s2">&gt; 
+ 
+        &lt;</span><span class="s4">activity</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;.EQMessageDialog&quot;</span><span class="s2"> 
+            </span><span class="s1">android:theme=</span><span class="s3">&quot;@style/Theme.Transparent&quot;</span><span class="s2"> 
+            </span><span class="s1">android:screenOrientation=</span><span class="s3">&quot;portrait&quot;</span><span class="s2"> 
+            /&gt; 
+        &lt;</span><span class="s4">activity</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;.EQBaseMessageDialog&quot;</span><span class="s2"> 
+            </span><span class="s1">android:theme=</span><span class="s3">&quot;@style/Theme.Transparent&quot;</span><span class="s2"> 
+            </span><span class="s1">android:screenOrientation=</span><span class="s3">&quot;portrait&quot;</span><span class="s2"> 
+            /&gt; 
+        &lt;</span><span class="s4">activity </span><span class="s1">android:name=</span><span class="s3">&quot;.EQNotificationListActivity&quot;</span><span class="s2"> 
+            </span><span class="s1">android:screenOrientation=</span><span class="s3">&quot;portrait&quot;</span><span class="s2"> 
+            /&gt; 
+        &lt;</span><span class="s4">activity </span><span class="s1">android:name=</span><span class="s3">&quot;.EQNotificationDetailActivity&quot;</span><span class="s2"> 
+            </span><span class="s1">android:screenOrientation=</span><span class="s3">&quot;portrait&quot;</span><span class="s2"> 
+            /&gt; 
+ 
+        &lt;</span><span class="s4">receiver </span><span class="s1">android:name=</span><span class="s3">&quot;com.eventqplatform.eqsdk.EQBroadCastReceiver&quot;</span><span class="s2">&gt; 
+            &lt;</span><span class="s4">intent-filter</span><span class="s2">&gt; 
+                &lt;</span><span class="s4">action </span><span class="s1">android:name=</span><span class="s3">&quot;android.intent.action.BOOT_COMPLETED&quot; </span><span class="s2">/&gt; 
+                &lt;</span><span class="s4">action </span><span class="s1">android:name=</span><span class="s3">&quot;android.intent.action.BATTERY_LOW&quot; </span><span class="s2">/&gt; 
+            &lt;/</span><span class="s4">intent-filter</span><span class="s2">&gt; 
+        &lt;/</span><span class="s4">receiver</span><span class="s2">&gt; 
+ 
+        &lt;</span><span class="s4">meta-data </span><span class="s1">android:name=</span><span class="s3">&quot;com.google.android.geo.API_KEY&quot; </span><span class="s1">android:value=</span><span class="s3">&quot;AIzaSyBbvmtdIOliZl6E7Q06dFoj1tSWpNhS51A&quot;</span><span class="s2">/&gt; 
+ 
+        &lt;</span><span class="s4">receiver </span><span class="s1">android:name=</span><span class="s3">&quot;com.google.android.gms.analytics.AnalyticsReceiver&quot;</span><span class="s2"> 
+            </span><span class="s1">android:enabled=</span><span class="s3">&quot;true&quot;</span><span class="s2">&gt; 
+            &lt;</span><span class="s4">intent-filter</span><span class="s2">&gt; 
+                &lt;</span><span class="s4">action </span><span class="s1">android:name=</span><span class="s3">&quot;com.google.android.gms.analytics.ANALYTICS_DISPATCH&quot; </span><span class="s2">/&gt; 
+            &lt;/</span><span class="s4">intent-filter</span><span class="s2">&gt; 
+        &lt;/</span><span class="s4">receiver</span><span class="s2">&gt; 
+        &lt;</span><span class="s4">service </span><span class="s1">android:name=</span><span class="s3">&quot;com.google.android.gms.analytics.AnalyticsService&quot;</span><span class="s2"> 
+            </span><span class="s1">android:enabled=</span><span class="s3">&quot;true&quot;</span><span class="s2"> 
+            </span><span class="s1">android:exported=</span><span class="s3">&quot;false&quot;</span><span class="s2">/&gt; 
+ 
+        &lt;</span><span class="s4">meta-data</span><span class="s2"> 
+            </span><span class="s1">android:name=</span><span class="s3">&quot;io.fabric.ApiKey&quot;</span><span class="s2"> 
+            </span><span class="s1">android:value=</span><span class="s3">&quot;a46db4c989e6a1098e04f8de48be8065f0602ca9&quot; </span><span class="s2">/&gt; 
+ 
+    &lt;/</span><span class="s4">application</span><span class="s2">&gt; 
+ 
+&lt;/</span><span class="s4">manifest</span><span class="s2">&gt; 
+</span></pre>
+</body>
+</html>
